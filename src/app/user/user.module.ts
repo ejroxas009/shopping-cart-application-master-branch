@@ -10,6 +10,7 @@ import { CheckoutItemComponent } from './component/checkout-item/checkout-item.c
 import { DashboardItemComponent } from './component/dashboard-item/dashboard-item.component';
 import { PendingItemComponent } from './component/pending-item/pending-item.component';
 import { ProfileItemComponent } from './component/profile-item/profile-item.component';
+import { UserRoutingModule } from './user-routing.module';
 
 
 
@@ -27,7 +28,15 @@ import { ProfileItemComponent } from './component/profile-item/profile-item.comp
     ProfileItemComponent
   ],
   imports: [
-    CommonModule
-  ]
+    CommonModule,
+    UserRoutingModule
+  ],
+  exports :[
+     DashboardComponent,
+     CartComponent,
+     ProfileComponent,
+     CheckoutComponent,
+     PendingOrdersComponent,
+    ]
 })
 export class UserModule { }

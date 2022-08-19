@@ -6,6 +6,7 @@ import { AdminComponent } from './pages/admin/admin.component';
 import { AdminItemComponent } from './components/admin-item/admin-item.component';
 import { AdminDashboardItemComponent } from './components/admin-dashboard-item/admin-dashboard-item.component';
 import { ProductItemComponent } from './components/product-item/product-item.component';
+import { AdminRoutingModule } from './admin-routing.module';
 
 
 
@@ -19,7 +20,13 @@ import { ProductItemComponent } from './components/product-item/product-item.com
     ProductItemComponent
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    AdminRoutingModule
+  ],
+  exports:[
+    AdminDashboardComponent,
+    AdminComponent,
+    ProductComponent
   ]
 })
 export class AdminModule { }
