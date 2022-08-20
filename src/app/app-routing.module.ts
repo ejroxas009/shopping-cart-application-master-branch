@@ -1,5 +1,8 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { AuthGuard } from './core/guards/auth.guard';
+import { RoleGuard } from './core/guards/role.guard';
+import { UserRoleGuard } from './core/guards/user-role.guard';
 
 
 
@@ -11,7 +14,8 @@ const routes : Routes = [
   },
   {
     path: "login",
-    loadChildren: () => import("./login/login.module").then(m => m.LoginModule)
+    loadChildren: () => import("./login/login.module").then(m => m.LoginModule),
+    
   },
   {
     path: "signup",
@@ -19,11 +23,13 @@ const routes : Routes = [
   },
   {
     path: "user",
-    loadChildren: () => import("./user/user.module").then(m => m.UserModule)
+    loadChildren: () => import("./user/user.module").then(m => m.UserModule),
+    canActivate: [AuthGuard, UserRoleGuard]
   },
   {
     path : "admin",
-    loadChildren: () => import("./admin/admin.module").then(m => m.AdminModule)
+    loadChildren: () => import("./admin/admin.module").then(m => m.AdminModule),
+    canActivate: [AuthGuard, RoleGuard]
   }
 ]
 

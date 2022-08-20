@@ -1,6 +1,6 @@
 import { HttpClient, HttpErrorResponse, HttpResponse } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { catchError, filter, map, Observable, throwError } from 'rxjs';
+import { catchError, EMPTY, filter, map, Observable, throwError } from 'rxjs';
 import { User } from 'src/app/user/models/user';
 
 @Injectable({
@@ -15,12 +15,14 @@ export class LoginService {
     
   }
 
-  // getUser(email: string){
-  //   return this.http.get("http://localhost:3000/users").pipe(map(data => {
-      
-  //   }))
+  getUser(email: string) {
+    return this.http.get("http://localhost:3000/users").pipe(map((users:any)=>{
+      return users.filter((user:any)=> user.email == email)
+    }))
+ 
     
-  // }
+    
+  }
 
  
  

@@ -6,27 +6,33 @@ import { CartComponent } from './pages/cart/cart.component';
 import { CheckoutComponent } from './pages/checkout/checkout.component';
 import { PendingOrdersComponent } from './pages/pending-orders/pending-orders.component';
 import { ProfileComponent } from './pages/profile/profile.component';
+import { AuthGuard } from '../core/guards/auth.guard';
 
 const routes : Routes = [
   {
     path: "",
-    component: DashboardComponent
+    component: DashboardComponent,
+    
   },
   {
     path: "cart",
-    component: CartComponent
+    component: CartComponent,
+    
   },
   {
     path: "checkout",
-    component: CheckoutComponent
+    component: CheckoutComponent,
+    
   },
   {
     path: "pending-orders",
-    component: PendingOrdersComponent
+    component: PendingOrdersComponent,
+    
   },
   {
     path: "profile",
-    component: ProfileComponent
+    component: ProfileComponent,
+    
   }
 ]
 
