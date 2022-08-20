@@ -17,7 +17,7 @@ import { AdminRoutingModule } from './admin-routing.module';
     AdminComponent,
     AdminItemComponent,
     AdminDashboardItemComponent,
-    ProductItemComponent
+    ProductItemComponent,
   ],
   imports: [
     CommonModule,
