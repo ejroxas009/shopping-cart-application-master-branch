@@ -1,0 +1,24 @@
+{
+  "users": [
+    {
+      "email": "emai1@gmail.com",
+      "password": "$2a$10$NEdt60T2iUQoH79Akl7lbePNSvL6si1QbeM/JXWV6XitQBLG1B8yO",
+      "firstname": "emmanuel",
+      "lastname": "roxas",
+      "gender": "male",
+      "userType": "admin",
+      "active": true,
+      "id": 2
+    },
+    {
+      "email": "email@email.com",
+      "password": "$2a$10$7l.DXl6.923rPzZqgAjtS.qgQgIt8CbNgGnKK5/IRm1mDohvwA7me",
+      "firstname": "emmanuel john",
+      "lastname": "roxas",
+      "gender": "male",
+      "userType": "user",
+      "active": true,
+      "id": 3
+    }
+  ]
+}
