@@ -7,6 +7,10 @@ import { AdminItemComponent } from './components/admin-item/admin-item.component
 import { AdminDashboardItemComponent } from './components/admin-dashboard-item/admin-dashboard-item.component';
 import { ProductItemComponent } from './components/product-item/product-item.component';
 import { AdminRoutingModule } from './admin-routing.module';
+import { ProductFormComponent } from './pages/product-form/product-form.component';
+import { FormBuilder, ReactiveFormsModule } from '@angular/forms';
+import { SharedModule } from '../shared/shared.module';
+
 
 
 
@@ -18,15 +22,22 @@ import { AdminRoutingModule } from './admin-routing.module';
     AdminItemComponent,
     AdminDashboardItemComponent,
     ProductItemComponent,
+    ProductFormComponent,
   ],
   imports: [
     CommonModule,
-    AdminRoutingModule
+    AdminRoutingModule,
+    ReactiveFormsModule,
+    SharedModule
+    
   ],
   exports:[
     AdminDashboardComponent,
     AdminComponent,
-    ProductComponent
+    ProductComponent,
+    ProductFormComponent,
+   
+
   ]
 })
 export class AdminModule { }
