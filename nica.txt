@@ -1,3 +1,7 @@
 Go Group4!
+<<<<<<< HEAD
 Hi group 4!!-ej roxas
 Hi There! - ej roxas
+=======
+Hi group 4!!-ej roxas
+>>>>>>> master
