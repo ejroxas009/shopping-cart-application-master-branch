@@ -1,4 +1,4 @@
-export interface Product {
+export interface Order {
     id : number,
     name: string,
     brand: string,
@@ -8,5 +8,7 @@ export interface Product {
     is_in_inventory: boolean,
     items_left: number,
     imageURL: string,
-    slug: string 
+    slug : string ,
+    quantity : number,
+    isPending: boolean
 }

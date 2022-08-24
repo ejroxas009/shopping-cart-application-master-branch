@@ -2,6 +2,7 @@ import { JsonPipe } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup } from '@angular/forms';
 import { catchError, EMPTY, switchMap } from 'rxjs';
+import { CoreUserService } from 'src/app/core/services/core-user.service';
 
 import { User } from 'src/app/user/models/user';
 import { LoginService } from '../../services/login.service';
@@ -14,7 +15,7 @@ import { LoginService } from '../../services/login.service';
 export class LoginComponent implements OnInit {
 
   loginForm : FormGroup
-  constructor(private fb : FormBuilder, private loginService : LoginService) { 
+  constructor(private fb : FormBuilder, private loginService : LoginService, private coreUser : CoreUserService) { 
 
     this.loginForm = this.fb.group({
     email : [''],
@@ -73,6 +74,8 @@ export class LoginComponent implements OnInit {
         account = data
         console.log(account[0].userType)
         localStorage.setItem('userType', account[0].userType)
+        this.coreUser.user = account[0].id
+        console.log(this.coreUser.user)
         return EMPTY
       }),
       catchError((err) => {

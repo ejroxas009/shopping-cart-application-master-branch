@@ -14,6 +14,7 @@ import { UserRoutingModule } from './user-routing.module';
 
 
 
+
 @NgModule({
   declarations: [
     DashboardComponent,
@@ -29,7 +30,8 @@ import { UserRoutingModule } from './user-routing.module';
   ],
   imports: [
     CommonModule,
-    UserRoutingModule
+    UserRoutingModule,
+  
   ],
   exports :[
      DashboardComponent,
