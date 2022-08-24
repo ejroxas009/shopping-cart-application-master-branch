@@ -1,1 +1,21 @@
-<p>nav-bar works!</p>
+<mat-toolbar color="black">
+    <form class="example-form">
+        <mat-form-field class="example-full-width" appearance="fill">
+          <mat-label>Search</mat-label>
+          <input type="text" matInput placeholder="Search the latest collection"
+          [(ngModel)]="searchTerm" (keyup)="search($event)">
+          <mat-icon matSuffix>search</mat-icon>
+        </mat-form-field>
+      </form>
+      <div class="logo">
+        <strong style="font-size: 30px;">SHOPPINGKART</strong>
+        <span class="example-spacer"></span>
+        </div>
+    <span class="example-spacer"></span>
+    <button mat-icon-button class="example-icon favorite-icon" aria-label="Example icon-button with heart icon">
+      <mat-icon>favorite</mat-icon>
+    </button>
+    <button mat-icon-button class="example-icon" aria-label="Example icon-button with share icon">
+      <mat-icon matBadge="0"  matBadgeOverlap="false" matBadgeColor="warn" >shopping_cart</mat-icon>
+    </button>
+</mat-toolbar>
