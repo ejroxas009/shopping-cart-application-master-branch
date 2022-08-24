@@ -2,6 +2,6 @@
 
 <div *ngFor = "let product of products">
     <app-product-item [product] = "product" (deleteActionEmitter) = "delete($event)" (editActionEmitter) = "edit($event)"></app-product-item>
-    
+
 </div>
 

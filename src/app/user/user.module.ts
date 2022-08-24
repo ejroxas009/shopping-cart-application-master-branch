@@ -17,7 +17,6 @@ import { FormsModule } from '@angular/forms';
 
 
 
-
 @NgModule({
   declarations: [
     DashboardComponent,
@@ -34,13 +33,9 @@ import { FormsModule } from '@angular/forms';
   imports: [
     CommonModule,
     UserRoutingModule,
-<<<<<<< HEAD
-  
-=======
     MaterialDesignModule,
     SharedModule,
     FormsModule
->>>>>>> master
   ],
   exports :[
      DashboardComponent,

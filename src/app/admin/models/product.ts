@@ -8,5 +8,5 @@ export interface Product {
     is_in_inventory: boolean,
     items_left: number,
     imageURL: string,
-    slug: string 
+    slug : string 
 }
