@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import { Order } from '../../models/order';
 
 @Component({
   selector: 'app-checkout-item',
@@ -6,10 +7,10 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./checkout-item.component.scss']
 })
 export class CheckoutItemComponent implements OnInit {
-
+  @Input() checkout : Order | undefined
   constructor() { }
 
   ngOnInit(): void {
   }
-
+  
 }
